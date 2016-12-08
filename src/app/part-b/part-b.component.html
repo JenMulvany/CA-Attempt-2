@@ -1,3 +1,13 @@
-
-
-<p>Part B</p>
+ <div class="container">
+    <h2>BMI Calculator</h2>
+    <form class="form-horizontal" name="calculate">
+      <div class="block">
+        <label class="control-label col-sm-2" for="stone">Stone</label>
+        <div class="col-sm-10">
+           <input [(ngModel)]="stone" name="stone" (keyup.enter)=" StoneToKgs()" type="number" step="any" class="form-control" >
+         <label class="control-label col-sm-2" for="pounds">Pounds</label>
+           <input [(ngModel)]="pounds" name="pounds"(keyup.enter)=" StoneAndPoundToKgs()" type="number" step="any" class="form-control" >
+            
+        <label class="control-label col-sm-2" for="orKgs">orKgs</label> 
+       <input [(ngModel)]="orKgs" name="orKgs"(keyup.enter)="orKgsToStoneAndPound()" type="number" step="any" class="form-control" >
+         </div>  

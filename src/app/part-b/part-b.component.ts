@@ -16,4 +16,26 @@ export class PartBComponent{
       this.router.navigate(["part-a"]);        
     }
 
+    stone : number = 0;
+    pounds : number = 0;
+    orKgs : number = 0;
+    feet : number = 0;
+    inches : number = 0;
+    orMeteres : number =0;
+StoneToKgs() {
+    this.orKgs = this.stone * 6.35029318 ;
+  }
+StoneAndPoundToKgs(){
+  this.orKgs= this.stone * 6.35029318 + this.pounds * 0.45359237;
+}
+orKgsToStoneAndPound() {
+  this.stone = this.orKgs *  2.2046226218/14;
+  this.pounds = this.orKgs * 0.45359237/2.2046226218;
+  
+
+
+  
+}
+
+
 }
