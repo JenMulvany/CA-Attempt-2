@@ -1,13 +1,48 @@
- <div class="container">
+ <div class ="jumbotron" align=center>
     <h2>BMI Calculator</h2>
-    <form class="form-horizontal" name="calculate">
-      <div class="block">
-        <label class="control-label col-sm-2" for="stone">Stone</label>
-        <div class="col-sm-10">
-           <input [(ngModel)]="stone" name="stone" (keyup.enter)=" StoneToKgs()" type="number" step="any" class="form-control" >
-         <label class="control-label col-sm-2" for="pounds">Pounds</label>
-           <input [(ngModel)]="pounds" name="pounds"(keyup.enter)=" StoneAndPoundToKgs()" type="number" step="any" class="form-control" >
-            
-        <label class="control-label col-sm-2" for="orKgs">orKgs</label> 
-       <input [(ngModel)]="orKgs" name="orKgs"(keyup.enter)="orKgsToStoneAndPound()" type="number" step="any" class="form-control" >
-         </div>  
+
+    <form>
+        <div class="row">
+            <h3>Enter Your Weight</h3>
+            <div class=col-sm-4>
+                <div class="form-group">
+            <h5>Stone</h5>
+            <input [(ngModel)]="stone" name="stone" (keyup.enter)=" StoneToKgs()" type="number" step="any" class="form-control" >
+            </div>
+            </div>
+            <div class=col-sm-4>
+                <div class="form-group">
+            <h5>Pounds</h5>
+            <input [(ngModel)]="pounds" name="pounds"(keyup.enter)=" StoneAndPoundToKgs()" type="number" step="any" class="form-control" >
+            </div>
+            </div>
+            <div class=col-sm-4>
+                <div class="form-group">
+            <h5>or KGs</h5>
+            <input [(ngModel)]="orKgs" name="orKgs"(keyup.enter)="orKgsToStoneAndPound()" type="number" step="any" class="form-control" >
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h3>Enter Your Height</h3>
+            <div class=col-sm-4>
+                <div class="form-group">
+            <h5>Feet</h5>
+            <input [(ngModel)]="feet" name="feet" (keyup.enter)="FeetToMetres()" type="number" step="any" class="form-control" >
+            </div>
+            </div>
+            <div class=col-sm-4>
+                <div class="form-group">
+            <h5>Inches</h5>
+            <input [(ngModel)]="inches" name="inches"(keyup.enter)="feetAndInchesToMeters()" type="number" step="any" class="form-control" >
+            </div>
+            </div>
+            <div class=col-sm-4>
+                <div class="form-group">
+            <h5>or Meters</h5>
+            <input [(ngModel)]="orMeters" name="orMeters"(keyup.enter)="orMetersTofeetAndInches()" type="number" step="any" class="form-control" >
+            </div>
+            </div>
+        </div>
+</form>
