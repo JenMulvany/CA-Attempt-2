@@ -1,0 +1,20 @@
+
+      <div class="container">
+    <h2>Temperature Unit Convertor</h2>
+    <form class="form-horizontal" name="convert">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="Celcius">Celcius:</label>
+        <div class="col-sm-10">
+          <input [(ngModel)]="Celcius" name="Celcius" (keyup.enter)=" CelciusToFahrenhet()" type="number" step="any" class="form-control" placeholder="Enter a number">
+          <button (click) = "CelciusToFahrenhet()">Convert </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="Fahrenhet">Fahrenhet:</label>
+        <div class="col-sm-10">
+          <input [(ngModel)]="Fahrenhet" name="Fahrenhet" (keyup.enter)=" fahrenthetToCelcius()" type="number" step="any" class="form-control" placeholder="Enter a number">
+          <button (click) = "fahrenthetToCelcius()">Convert </button>         
+        </div>
+      </div>
+    </form>
+  </div>
